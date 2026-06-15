@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Collection | The Original Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Hanken+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#e7bcbf",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dbdad7",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c3c8c1",
+                        "surface-bright": "#fbf9f6",
+                        "slate-gray": "#4A5553",
+                        "tertiary": "#271013",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#eabf89",
+                        "surface-tint": "#4d6453",
+                        "surface-container": "#efeeeb",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#434843",
+                        "on-secondary-fixed-variant": "#5e4116",
+                        "surface-variant": "#e3e2e0",
+                        "on-background": "#1b1c1a",
+                        "surface-container-low": "#f5f3f0",
+                        "tertiary-fixed": "#ffd9dc",
+                        "ochre-accent": "#D4A373",
+                        "surface": "#fbf9f6",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b4cdb8",
+                        "primary-fixed": "#d0e9d4",
+                        "on-tertiary-fixed": "#2d1417",
+                        "background": "#fbf9f6",
+                        "primary-container": "#1b3022",
+                        "surface-container-high": "#e9e8e5",
+                        "on-tertiary-container": "#b0898c",
+                        "surface-container-highest": "#e3e2e0",
+                        "warm-stone": "#F4F1ED",
+                        "primary": "#061b0e",
+                        "on-secondary-fixed": "#291800",
+                        "on-primary-fixed": "#0b2013",
+                        "dark-charcoal": "#1A1A1A",
+                        "on-primary-fixed-variant": "#364c3c",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#30312f",
+                        "secondary": "#78582b",
+                        "primary-fixed-dim": "#b4cdb8",
+                        "on-secondary-container": "#79592c",
+                        "inverse-on-surface": "#f2f1ee",
+                        "secondary-container": "#ffd39b",
+                        "on-surface": "#1b1c1a",
+                        "secondary-fixed": "#ffddb4",
+                        "tertiary-container": "#3f2427",
+                        "on-tertiary-fixed-variant": "#5d3f42",
+                        "outline": "#737973",
+                        "on-primary-container": "#819986",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "section-padding": "120px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "display-lg-mobile": ["Libre Caslon Text"],
+                        "navigation": ["Hanken Grotesk"],
+                        "headline-sm": ["Libre Caslon Text"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "navigation": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .nav-scrolled {
+            background-color: rgba(244, 241, 237, 0.95) !important;
+            backdrop-filter: blur(12px);
+        }
+        .editorial-image-container {
+            overflow: hidden;
+        }
+        .editorial-image-container img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .editorial-image-container:hover img {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-500 bg-surface/90 dark:bg-primary-container/90 backdrop-blur-md border-b border-slate-gray/20" id="top-nav">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">
+                THE ORIGINAL COLLECTION
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-navigation text-navigation uppercase tracking-widest text-primary dark:text-primary-fixed-dim border-b border-primary dark:border-primary-fixed-dim pb-1 transition-colors duration-300" href="#">Our Collection</a>
+<a class="font-navigation text-navigation uppercase tracking-widest text-slate-gray dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Our Story</a>
+<a class="font-navigation text-navigation uppercase tracking-widest text-slate-gray dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Experiences</a>
+<a class="font-navigation text-navigation uppercase tracking-widest text-slate-gray dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Dining</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="bg-dark-charcoal text-white font-navigation text-navigation px-8 py-3 uppercase tracking-widest hover:bg-primary transition-colors duration-300 scale-95 duration-200">
+                    Book Now
+                </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[90vh] w-full overflow-hidden flex items-center justify-center bg-primary">
+<img alt="Immersive landscape of a coastal hotel property" class="absolute inset-0 w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida/AP1WRLtH91FrY54u0fkxLcW5fyb8hpND0WoWKTg2qL4t5opJTryigUDCkzwV5i_FAbkFsGmf9RBqBG12nHim_sfufwRNcmfgXmOXjXdzjZ6QNNIlCeyVP7GbmVUirkZ2anxUWxXfDUVZlffs97WBGUeaxqk9pbcfEFwFGRUPhb3tust3yZ6QdxneSeH-Dk7uz9wS12lpIfNiGBT_2k7iD8DuVPtMGPwzMm_XFwsdsh4IyqyG5SLiCaa5-XnShlA"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-surface"></div>
+<div class="relative z-10 text-center text-white px-margin-mobile">
+<p class="font-label-caps text-label-caps uppercase mb-4 tracking-[0.3em]">Curated Destinations</p>
+<h1 class="font-display-lg text-display-lg md:text-display-lg max-w-4xl mx-auto drop-shadow-2xl">
+                Our Collection of Places
+            </h1>
+<div class="mt-12 flex justify-center items-center gap-4">
+<span class="w-12 h-[1px] bg-white/50"></span>
+<span class="material-symbols-outlined scale-125">expand_more</span>
+<span class="w-12 h-[1px] bg-white/50"></span>
+</div>
+</div>
+</header>
+<!-- Collection Intro -->
+<section class="py-section-padding px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Memories are our primary currency.</h2>
+<p class="font-body-lg text-body-lg text-slate-gray max-w-2xl">
+                    Our curated collection of hotels and venues invites you to indulge in one-of-a-kind, best-in-class experiences, and create lifelong memories. From the windswept coasts of Skye to the rolling hills of the Cotswolds.
+                </p>
+</div>
+<div class="md:col-span-4 flex flex-col justify-end items-start md:items-end">
+<div class="w-full h-[1px] bg-slate-gray/20 mb-6"></div>
+<p class="font-label-caps text-label-caps text-ochre-accent">10 PROPERTIES ACROSS THE UK</p>
+</div>
+</div>
+</section>
+<!-- Properties Grid -->
+<main class="space-y-section-padding pb-section-padding">
+<!-- Property 1: Eilean Iarmain (Full Width Asymmetric) -->
+<section class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 editorial-image-container group h-[600px]">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-angle view of a traditional white-washed Scottish hotel building nestled on the rugged edge of a mist-shrouded Isle of Skye coastline. The atmosphere is moody and atmospheric, with the deep greens of the highland grass contrasting with the dark, reflective waters of the Atlantic. The lighting is soft and diffused, characteristic of a late highland afternoon. The overall aesthetic is one of secluded luxury and heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfnaOOtwvqSW52WubqpftBm1FMuKavm276yDLmDc6KOnaRbNpW4tFV-3COdqxjjSrRQkE-JlgSRjsBg2rUYRFXjmpxXuiGl7REjWJm15cvNkf2wtBguagRwhkrPuYVutAl29bI6Ql8xPh4ifBFri_85SC6kBQtwlIV28o8kLOijwXEn3N9tLDYQTzzGPuBZX_f2PNX5UkDuYbV6XkA6XF4cWjLsYiFHg6ttI7j9t45icq69-nzqElCdzEe9OK9qeosjiImpmgKZ5U"/>
+</div>
+<div class="md:col-span-5 md:pl-12">
+<p class="font-label-caps text-label-caps text-slate-gray mb-2">Isle Ornsay, Isle Skye</p>
+<h3 class="font-display-lg text-headline-md text-primary mb-4">Eilean Iarmain</h3>
+<h4 class="font-headline-sm text-headline-sm text-ochre-accent italic mb-6">The Original Gaelic Hotel on Skye</h4>
+<p class="font-body-md text-body-md text-slate-gray mb-8">
+                        Experience authentic Highland hospitality where Gaelic culture is celebrated daily. Overlooking the Sound of Sleat, this historic hotel offers a sanctuary of tradition and refined comfort.
+                    </p>
+<div class="flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-dark-charcoal hover:text-primary transition-colors flex items-center" href="#">
+                            VISIT WEBSITE <span class="mx-2">|</span> <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+<a class="font-label-caps text-label-caps text-slate-gray hover:text-dark-charcoal transition-colors" href="#">
+                            DISCOVER MORE
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Property 2 & 3: Auchen Castle & Broadford (Two Column) -->
+<section class="bg-warm-stone py-24">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+<!-- Auchen Castle -->
+<div class="space-y-8">
+<div class="editorial-image-container aspect-[4/5] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A majestic, turreted Scottish fairytale castle constructed from weathered stone, standing proudly against a backdrop of rolling emerald hills in the Scottish Borders. The morning sun casts long, soft shadows across the manicured lawns. The scene is elegant and historic, rendered in a sophisticated palette of warm stone, forest green, and cool blue sky. The visual style is editorial and grand, evoking a sense of timeless romance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrR9Gu-kC-JJYobZRRFhYxBbxxnLWDKonstK23-2g-TYuB3gIXaZmN61cvo_ixkMP_vZXBAdMu9Bem81MXHKVcdWGnq5CnZMrwfRZRJOQzdAgIy7iwmwk8kFcOTNt6KM0Wp6l60LR0hLhDjarH5SDiJ7IJU1xvs_s2ScmQfV0MZwGU3Tgv8NsWDEt1SlHM3Db1oqQivZMvsg14deo2YvTn8OA-r2IIVgj2pEYjpVPDI2O4QMziG2WqZ1bNd55ifHKTZIMAeqRYdcU"/>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-slate-gray mb-2">Beattock, Scottish Borders</p>
+<h3 class="font-headline-md text-headline-md text-primary">Auchen Castle</h3>
+<h4 class="font-body-md text-body-md text-ochre-accent italic mb-6">The Original Scottish fairytale castle</h4>
+<div class="flex items-center gap-6">
+<a class="bg-dark-charcoal text-white font-label-caps text-label-caps px-6 py-3 hover:bg-primary transition-all" href="#">VISIT WEBSITE</a>
+<a class="font-label-caps text-label-caps border-b border-slate-gray/30 pb-1" href="#">DISCOVER MORE</a>
+</div>
+</div>
+</div>
+<!-- Broadford Hotel -->
+<div class="space-y-8 md:mt-24">
+<div class="editorial-image-container aspect-[4/5] bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A charming, historic inn with white walls and slate roofs, located on the shore of a serene loch on the Isle of Skye. The lighting is warm and golden, suggesting a late summer evening. The water is calm, reflecting the rugged mountains in the distance. The mood is peaceful and welcoming, featuring a palette of crisp whites, slate grays, and deep blues. A professional architectural photograph with a minimalist, high-end travel aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCx5CjAoySonSi7Tj-jCupn1M46YQaYnX6GgFnG2A5CjsTGH-QqBI7dhshWneAmpakFS0rrIuYaLCXaQw_rhAY1ELwGSV6nEozzBZiuW929fREh73MLpkjRGPAI5DGz0BrZkFIhsflRrYuVeDbSc-kn-SkHCUNcvzxNjQJtUUV1KRmNlLwGc6fwT1NXEaB89CuwesiEo4kJiogq41z0pfM1XTn5BVbB6znqXkDZNMPbf9VAufIov4dr8fyJ2DCMQajHzRS_TqptR0"/>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-slate-gray mb-2">Isle of Skye, Highlands</p>
+<h3 class="font-headline-md text-headline-md text-primary">The Broadford Hotel</h3>
+<h4 class="font-body-md text-body-md text-ochre-accent italic mb-6">The Original home of Drambuie</h4>
+<div class="flex items-center gap-6">
+<a class="bg-dark-charcoal text-white font-label-caps text-label-caps px-6 py-3 hover:bg-primary transition-all" href="#">VISIT WEBSITE</a>
+<a class="font-label-caps text-label-caps border-b border-slate-gray/30 pb-1" href="#">DISCOVER MORE</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Property 4: Lewtrenchard Manor (Inverted Layout) -->
+<section class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1 md:pr-12">
+<p class="font-label-caps text-label-caps text-slate-gray mb-2">Okehampton, Devon</p>
+<h3 class="font-display-lg text-headline-md text-primary mb-4">Lewtrenchard Manor</h3>
+<h4 class="font-headline-sm text-headline-sm text-ochre-accent italic mb-6">The Original Manor House Hotel on Dartmoor</h4>
+<p class="font-body-md text-body-md text-slate-gray mb-8">
+                        Step back into a world of jacobean grandeur and timeless elegance. Nestled within its own secluded valley, Lewtrenchard Manor offers an escape like no other in the heart of Devon.
+                    </p>
+<div class="flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-dark-charcoal hover:text-primary transition-colors flex items-center" href="#">
+                            VISIT WEBSITE <span class="mx-2">|</span> <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+<a class="font-label-caps text-label-caps text-slate-gray hover:text-dark-charcoal transition-colors" href="#">
+                            DISCOVER MORE
+                        </a>
+</div>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 editorial-image-container group h-[600px]">
+<img class="w-full h-full object-cover" data-alt="An exquisite Jacobean manor house constructed of golden limestone, set within a lush, private garden valley in Devon. The architecture is intricate, featuring mullioned windows and ornate stone carvings. The scene is bathed in the soft, diffused light of a hazy morning. The aesthetic is one of refined English luxury and historical significance, with a color palette of warm gold, deep forest green, and ivory. High-end editorial photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBADeW3AlORchYy1Y-bkE4Fet-jbGHchizpfU4_cohSvrWQhcnn2HOIM-C1uD0DYBlf9UI3Js0OPwPDxRDPV1lebbb6DMIgtfxDjWKl72f-ZgmY5NFK5UeO4UuNGtn3vC4acF6Sika8JyW4pkyhP9BI4Ht0GqZoTuTZizFakosKCO4S6-36r8y6xPeHLGEJ-uG34DhZ33CjMzGWB3Mj2dZg04TLngLC-DiZVOGEjx6xtH4K_0aiBH7BT7NXFE_XMEpjy59ko77Z3fY"/>
+</div>
+</div>
+</section>
+<!-- Bento Grid for others -->
+<section class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Forss House -->
+<div class="bg-surface-container p-10 space-y-6 flex flex-col justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-slate-gray mb-4">Thurso, Caithness</p>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Forss House Hotel</h3>
+<p class="font-body-md text-body-md text-slate-gray italic">The Original Highland Lodge on a waterfall</p>
+</div>
+<div class="editorial-image-container aspect-square mb-6">
+<img class="w-full h-full object-cover" data-alt="A picturesque Highland lodge built from rugged grey stone, overlooking a dramatic cascading waterfall on a rushing river in Northern Scotland. The scene is wild and beautiful, with vibrant green moss and dark, churning water. The lighting is moody and overcast, emphasizing the raw natural beauty of the Caithness region. A high-contrast, editorial style image focusing on textures and atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmsrAhJU-fVRP_YHsslscZYiMdt3sZt3cfoRKxedWekNCuXacxvKSFIOUMsPkRRYWYymTvYC54nuMU1ArOjIPMdHd-B64hx3vhNh8X8-wZLYAc-rg2JaPBwHNNMpEuX8cLp5V5ykbo2hir9lA--JlbMNZNyGESpyfUHDJdFReu-izI_UapaiLNCwFnjgw-6TBOJyFpiARCaXGeUibbPBqYaXbG2CuO4AhfD00eQ8a20wbnwVqUw7ecQyvYaAOOcQYP5Bm3f_yePfo"/>
+</div>
+<a class="font-label-caps text-label-caps inline-block border-b border-dark-charcoal/20 pb-1 self-start" href="#">VISIT WEBSITE</a>
+</div>
+<!-- Melville Castle -->
+<div class="bg-primary text-white p-10 space-y-6 flex flex-col justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-on-primary-container mb-4">Gilmerton, Edinburgh</p>
+<h3 class="font-headline-sm text-headline-sm text-white mb-2">Melville Castle</h3>
+<p class="font-body-md text-body-md text-on-primary-container italic">The Original castle hotel in Edinburgh</p>
+</div>
+<div class="editorial-image-container aspect-square mb-6">
+<img class="w-full h-full object-cover" data-alt="A stately 18th-century castle with crenelated towers, constructed from dark, weathered stone and nestled within a lush, ancient woodland on the outskirts of Edinburgh. The lighting is dramatic, with shafts of light breaking through a dark sky to illuminate the stone facade. The mood is powerful and aristocratic, featuring a palette of deep charcoal, emerald green, and slate gray. Professional architectural landscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB_FfiOXBaMhRy0hQyx8QgtHg8O9QTpXX3EgKB5nLVSz6hRH73psPhQ3liXbieAHWjLxFg2EFUsFNAtU9m7VtOTtEs5HLLJdSMUQBE98iQD5Pg2p0VdeWdOobDkQj5E7tMfbZjupGBIalUBbJfkvfq_qsdnHr12a-E30meoOuEDRHYHAQtDNXU9YM5B2JuV5vlonT0Tmy3LU-CMUQd7I1P9xGAJlsi7f9u3y62m9XTWbMIrg3qJOdwVrS3eA2zUKZkT4-MNvX3zhU"/>
+</div>
+<a class="font-label-caps text-label-caps inline-block border-b border-white/40 pb-1 self-start" href="#">VISIT WEBSITE</a>
+</div>
+<!-- Widbrook Grange -->
+<div class="bg-surface-container p-10 space-y-6 flex flex-col justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-slate-gray mb-4">Near Bath, Wiltshire</p>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Widbrook Grange</h3>
+<p class="font-body-md text-body-md text-slate-gray italic">The Original farmhouse in the Cotswolds</p>
+</div>
+<div class="editorial-image-container aspect-square mb-6">
+<img class="w-full h-full object-cover" data-alt="A sophisticated, rustic-chic farmhouse made of classic Cotswold honey-colored stone, surrounded by beautifully landscaped gardens and historic outbuildings near Bath. The lighting is warm and inviting, characteristic of a golden hour in the English countryside. The image has a clean, minimalist aesthetic with a focus on natural materials and high-end rural life. Palette of soft cream, sage green, and warm wood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6zFqdWO1c9gihKeTttFLijGwvFepHJzUijyxICSLF-wMhce3HH1nDKubpL_jx-DW1Ret0n5lXaAK8vZgiUH2HzBvZD28zBnfU8c1tu63EWKg4ObdvDW8I3ZqFQ20lwreWFWhQd4S2dgvs6ej4f2UYAoLN4PdolKsmh8PXWXSXO8ylNxTUpXy9RI7eudWxlLxHMMjzOFMgRqVz1RbLPsrAqtPIcfK8uE0uhAU42VSCRJXrp5ebGgQ_Whhc60bPjE8Nf53xDm102ds"/>
+</div>
+<a class="font-label-caps text-label-caps inline-block border-b border-dark-charcoal/20 pb-1 self-start" href="#">VISIT WEBSITE</a>
+</div>
+</div>
+</section>
+<!-- Final Property: Shieldaig Lodge (Full Width Editorial) -->
+<section class="px-margin-desktop max-w-container-max mx-auto">
+<div class="relative h-[70vh] w-full overflow-hidden flex items-end">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="An expansive, cinematic landscape featuring a secluded Highland retreat situated on a peninsula of a vast Scottish loch. The mountains in the background are rugged and snow-capped, under a dramatic, cloud-filled sky. The hotel is a classic white-walled structure that stands as a beacon of civilization in the wild. The lighting is crisp and cool, evoking the bracing air of Ross-shire. A masterpiece of travel photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOtVC2CW1NDoI0cAs2Vz_zwtRCX_Kqv47JOf23bQkgNUkfr_vQJNd-Xm4PlGR6IMDlkETdgDIvMmjcSSHwf_QWjGtoFJ167bpUo6gG27iJDgb_r7UuENjhvKUVbj-TPHm1FqIf4Jv_OsVPPw6MKO2IgdS-wRzPj_GqRylweJw6Nf5l8fSkDYdPblBW6DGY3SoogukRWLLDnodxDoBZ4pOd3mtjXSy-V4ji1a7eBJA08musMq_8GDNeX2j0LfJzWW_cwSBe3OC1ZE8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="relative z-10 p-12 text-white max-w-2xl">
+<p class="font-label-caps text-label-caps mb-2 text-on-primary-container">Gairloch, Ross-Shire</p>
+<h3 class="font-display-lg text-headline-md mb-4">Shieldaig Lodge</h3>
+<h4 class="font-headline-sm text-headline-sm italic mb-6">The Original Highland retreat</h4>
+<div class="flex gap-6">
+<a class="bg-white text-dark-charcoal font-label-caps text-label-caps px-8 py-4 hover:bg-warm-stone transition-all" href="#">BOOK YOUR RETREAT</a>
+<a class="flex items-center gap-2 font-label-caps text-label-caps" href="#">DISCOVER MORE <span class="material-symbols-outlined">north_east</span></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-warm-stone dark:bg-primary-container w-full pt-section-padding pb-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 mb-12">
+<div class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim mb-6">THE ORIGINAL COLLECTION</div>
+<p class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant max-w-xs mb-8">
+                    Curators of memories. Collectors of gins, whiskies, and one-of-a-kind experiences.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-slate-gray/20 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-slate-gray/20 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="col-span-6 md:col-span-2 mb-12">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim mb-6">EXPLORE</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant hover:text-primary transition-all" href="#">Our Collection</a></li>
+<li><a class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant hover:text-primary transition-all" href="#">Our Story</a></li>
+<li><a class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant hover:text-primary transition-all" href="#">Experiences</a></li>
+<li><a class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant hover:text-primary transition-all" href="#">Dining</a></li>
+</ul>
+</div>
+<div class="col-span-6 md:col-span-2 mb-12">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim mb-6">LEGAL</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant hover:text-primary transition-all" href="#">Sustainability</a></li>
+<li><a class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant hover:text-primary transition-all" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-4 mb-12">
+<h4 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim mb-6">NEWSLETTER</h4>
+<p class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant mb-4 italic">Join our circle for exclusive collection updates.</p>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-slate-gray py-4 focus:ring-0 focus:border-primary transition-all font-label-caps text-label-caps" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="col-span-12 pt-12 mt-12 border-t border-slate-gray/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-body-md text-slate-gray dark:text-on-surface-variant">© 2024 The Original Collection. All rights reserved.</p>
+<div class="flex items-center gap-2 text-slate-gray">
+<span class="font-label-caps text-label-caps">Crafted for Memories</span>
+<span class="material-symbols-outlined text-[14px]">favorite</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Sticky Header Micro-interaction
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('nav-scrolled');
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.classList.remove('shadow-sm');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
